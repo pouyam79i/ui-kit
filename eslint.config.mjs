@@ -28,7 +28,6 @@ export default [
         },
         ecmaVersion: 'latest',
         sourceType: 'module',
-        project: './tsconfig.json',
       },
     },
   },

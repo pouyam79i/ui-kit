@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test": "vitest",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -12,7 +13,12 @@
     "lit": "^3.2.1"
   },
   "devDependencies": {
+    "@open-wc/testing": "^4.0.0",
+    "@web/dev-server-esbuild": "^1.0.4",
+    "happy-dom": "^17.4.6",
+    "jsdom": "^26.1.0",
     "typescript": "~5.7.2",
-    "vite": "^6.3.1"
+    "vite": "^6.3.1",
+    "vitest": "^3.1.2"
   }
 }
