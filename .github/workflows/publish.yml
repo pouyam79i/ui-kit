@@ -14,7 +14,7 @@ jobs:
           node-version: 20
           registry-url: https://npm.pkg.github.com
       - run: npm ci
-      - run: cd /home/runner/work/ui-kit/ui-kit/packages/core
+      - run: cd packages/core
       - name: Publish
         run: npm publish
         env:
