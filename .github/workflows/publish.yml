@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
-
+      - run: cd /home/runner/work/ui-kit/ui-kit/packages/core
       - run: npm ci
       - run: npm run build
 
