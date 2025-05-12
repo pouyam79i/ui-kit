@@ -1,8 +1,9 @@
 name: Publish Package
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
 
 jobs:
   publish:
@@ -13,9 +14,18 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
+
       - run: npm ci
       - run: cd packages/core
-      - name: Publish
-        run: npm publish
+
+      - name: Version and Publish
+        run: |
+          npm version patch --no-git-tag-version
+          npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Validate
+        run: |
+          npm install -g semver
+          semver $(npm pkg get version --workspaces | jq -r '.[]')
