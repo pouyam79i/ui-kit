@@ -1,7 +1,7 @@
 {
   "name": "core",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -20,5 +20,12 @@
     "typescript": "~5.7.2",
     "vite": "^6.3.1",
     "vitest": "^3.1.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pouyam79i/ui-kit.git"
   }
 }
