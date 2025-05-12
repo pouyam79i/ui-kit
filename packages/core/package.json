@@ -1,6 +1,5 @@
 {
-  "name": "core",
-  "private": true,
+  "name": "pm-kit",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -20,12 +19,5 @@
     "typescript": "~5.7.2",
     "vite": "^6.3.1",
     "vitest": "^3.1.2"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pouyam79i/ui-kit.git"
   }
 }
