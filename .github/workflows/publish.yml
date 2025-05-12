@@ -1,8 +1,9 @@
 name: Publish Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
   publish:
@@ -13,10 +14,9 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
-          
+      - run: cd /home/runner/work/ui-kit/ui-kit/packages/core
+      - run: npm ci
       - name: Publish
-        run: cd /home/runner/work/ui-kit/ui-kit/packages/core
-        run: npm ci
         run: npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
