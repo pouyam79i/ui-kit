@@ -16,12 +16,11 @@ jobs:
           registry-url: https://npm.pkg.github.com
 
       - run: npm ci
-      - run: cd ./packages/core
-      - run: ls
-      - run: pwd
 
       - name: Version and Publish
         run: |
+          cd ./packages/core
+          pwd
           npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
